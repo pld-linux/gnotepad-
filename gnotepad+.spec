@@ -4,8 +4,8 @@ Version:	1.3.1
 Release:	2
 License:	GPL
 Group:		Applications/Editors
-Group(pt):	X11/Aplicações/Editores
 Group(pl):	Aplikacje/Edytory
+Group(pt):	Aplicações/Editores
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/gnotepad/%{name}-%{version}.tar.gz
 URL:		http://gnotepad.sourceforge.net/
 BuildRequires:	gnome-libs-devel
@@ -43,7 +43,7 @@ gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 %find_lang %{name} --with-gnome
 
 %clean
-rm -r $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
