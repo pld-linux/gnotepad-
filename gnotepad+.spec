@@ -33,11 +33,11 @@ wspó³czesnych edytorach tekstu z graficznym interfejsem u¿ytkownika.
 %setup -q
 
 %build
+rm -f missing
 %{__libtoolize}
 %{__gettextize}
-aclocal
+%{__aclocal}
 %{__autoconf}
-rm -f missing
 %{__automake}
 %configure \
 	--enable-gnome
@@ -45,11 +45,10 @@ rm -f missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	Applicationsdir=%{_applnkdir}/Office/Editors
-
-gzip -9nf AUTHORS NEWS README TODO ChangeLog
 
 %find_lang %{name} --with-gnome
 
@@ -58,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc {AUTHORS,NEWS,README,TODO,ChangeLog}.gz
+%doc AUTHORS NEWS README TODO ChangeLog
 %attr(755,root,root) %{_bindir}/gnp
 %{_mandir}/man1/*
 %{_applnkdir}/Office/Editors/gnotepad+.desktop
