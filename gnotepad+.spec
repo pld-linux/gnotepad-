@@ -29,7 +29,7 @@ gettextize --copy --force
 LDFLAGS="-s"; export LDFLAGS
 %configure \
 	--enable-gnome
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
