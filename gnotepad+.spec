@@ -7,7 +7,7 @@ Group:		Applications/Editors
 Group(pl):	Aplikacje/Edytory
 Source:		http://ack.netpedia.net/gnp/%{name}-%{version}.tar.gz
 URL:		http://members.xoom.com/ackahn/gnp/
-BuildRequire:	gnome-libs-devel
+BuildRequires:	gnome-libs-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define		_prefix	/usr/X11R6
