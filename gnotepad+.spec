@@ -13,7 +13,7 @@ Copyright: Freely distributable
 Url: http://members.xoom.com/ackahn/gnp
 Source: %{name}-%{version}.tar.gz
 Source1: gnotepad+.desktop
-Buildroot: /var/tmp/%{name}-%{version}-%{release}-root
+BuildRoot:	/tmp/%{name}-%{version}-root
 Requires: gtk+ >= 1.1.13 glib >= 1.1.13
 
 %changelog
