@@ -4,6 +4,7 @@ Version:	1.3.0
 Release:	1
 License:	GPL
 Group:		Applications/Editors
+Group(pt):	X11/Aplicações/Editores
 Group(pl):	Aplikacje/Edytory
 Source0:	http://download.sourceforge.net/gnotepad/%{name}-%{version}.tar.gz
 URL:		http://gnotepad.sourceforge.net/
@@ -15,10 +16,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_mandir		%{_prefix}/man
 
 %description
-gnotepad+ is an easy-to-use, yet fairly feature-rich, simple text editor
-for systems running X11 and using GTK+. It is designed for as little bloat
-as possible, while still providing many of the common features found in a
-modern GUI-based text editor.
+gnotepad+ is an easy-to-use, yet fairly feature-rich, simple text
+editor for systems running X11 and using GTK+. It is designed for as
+little bloat as possible, while still providing many of the common
+features found in a modern GUI-based text editor.
 
 %prep
 %setup -q
