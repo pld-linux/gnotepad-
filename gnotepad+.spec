@@ -1,7 +1,7 @@
 Summary:	Simple but versatile editor for X11
 Name:		gnotepad+
 Version:	1.3.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Editors
 Group(pt):	X11/Aplicações/Editores
@@ -35,7 +35,7 @@ make
 rm -rf $RPM_BUILD_ROOT
 make install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	Applicationsdir=%{_applnkdir}/Editors
+	Applicationsdir=%{_applnkdir}/Office/Editors
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	AUTHORS NEWS README TODO ChangeLog
@@ -50,5 +50,5 @@ rm -r $RPM_BUILD_ROOT
 %doc {AUTHORS,NEWS,README,TODO,ChangeLog}.gz
 %attr(755,root,root) %{_bindir}/gnp
 %{_mandir}/man1/*
-%{_applnkdir}/Editors/gnotepad+.desktop
+%{_applnkdir}/Office/Editors/gnotepad+.desktop
 %{_datadir}/gnotepad+
