@@ -5,7 +5,7 @@ Version:	1.3.3
 Release:	4
 License:	GPL
 Group:		Applications/Editors
-Source0:	ftp://download.sourceforge.net/pub/sourceforge/gnotepad/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/gnotepad/%{name}-%{version}.tar.gz
 #Patch0:		%{name}-gdk_pixbuf.patch
 URL:		http://gnotepad.sourceforge.net/
 BuildRequires:	autoconf
@@ -15,7 +15,6 @@ BuildRequires:	gnome-libs-devel
 BuildRequires:	gettext-devel
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 gnotepad+ is an easy-to-use, yet fairly feature-rich, simple text
