@@ -1,6 +1,6 @@
 Summary:	Simple but versatile editor for X11
 Name:		gnotepad+
-Version:	1.2.2
+Version:	1.3.0
 Release:	1
 License:	GPL
 Group:		Applications/Editors
@@ -11,8 +11,8 @@ BuildRequires:	gnome-libs-devel
 BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix	/usr/X11R6
-%define		_mandir	/usr/X11R6/man
+%define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
 
 %description
 gnotepad+ is an easy-to-use, yet fairly feature-rich, simple text editor
