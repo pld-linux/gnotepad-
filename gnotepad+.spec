@@ -48,7 +48,7 @@ in a modern GUI-based text editor.
 
 %build
 CFLAGS="$RPM_OPT_FLAGS" \
-./configure %{_target} \
+./configure %{_target_platform} \
 	--prefix=%{prefix} \
 	--disable-gnome
 make
