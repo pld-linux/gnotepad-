@@ -1,0 +1,8 @@
+- updated to 1.1.4,
+- updated URL,
+- added full Source url,
+- added Grouop(pl),
+- added BuildRequires rules,
+- added using %%configure and DESTDIR style install,
+- removed Sourc1 (desktop file is in current version source code).
+- added --enable-gnome to ./configure parameters.
