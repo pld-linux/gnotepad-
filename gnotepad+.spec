@@ -2,13 +2,15 @@ Summary:	Simple but versatile editor for X11
 Summary(pl):	Prosty ale wszechstronny edytor dlaa X11
 Name:		gnotepad+
 Version:	1.3.3
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/Editors
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/gnotepad/%{name}-%{version}.tar.gz
+#Patch0:		%{name}-gdk_pixbuf.patch
 URL:		http://gnotepad.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
+#BuildRequires:	gtkhtml-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gettext-devel
 BuildRequires:	libtool
@@ -31,6 +33,7 @@ wspó³czesnych edytorach tekstu z graficznym interfejsem u¿ytkownika.
 
 %prep
 %setup -q
+#%patch0 -p1
 
 %build
 rm -f missing
@@ -39,8 +42,10 @@ rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
+# does not compile with gtkhtml-1.0.
 %configure \
-	--enable-gnome
+	--enable-gnome \
+	--enable-gtkhtml=no
 %{__make}
 
 %install
@@ -48,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	Applicationsdir=%{_applnkdir}/Office/Editors
+	Applicationsdir=%{_applnkdir}/Editors
 
 %find_lang %{name} --with-gnome
 
@@ -60,5 +65,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS NEWS README TODO ChangeLog
 %attr(755,root,root) %{_bindir}/gnp
 %{_mandir}/man1/*
-%{_applnkdir}/Office/Editors/gnotepad+.desktop
+%{_applnkdir}/Editors/gnotepad+.desktop
 %{_datadir}/gnotepad+
