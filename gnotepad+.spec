@@ -36,9 +36,9 @@ wspó³czesnych edytorach tekstu z graficznym interfejsem u¿ytkownika.
 libtoolize --copy --force
 gettextize --copy --force
 aclocal
-autoconf
+%{__autoconf}
 rm -f missing
-automake -a -c -f
+%{__automake}
 %configure \
 	--enable-gnome
 %{__make}
