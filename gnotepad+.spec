@@ -47,7 +47,10 @@ in a modern GUI-based text editor.
 %setup
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" ./configure --prefix=%{prefix} --disable-gnome
+CFLAGS="$RPM_OPT_FLAGS" \
+./configure %{_target} \
+	--prefix=%{prefix} \
+	--disable-gnome
 make
 
 %install
