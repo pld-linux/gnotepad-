@@ -1,8 +1,8 @@
 Summary:	Simple but versatile editor for X11.
 Name:		gnotepad+
 Version:	1.1.4
-Release:	3
-Copyright:	Freely distributable
+Release:	4
+License:	GPL
 Group:		Applications/Editors
 Group(pl):	Aplikacje/Edytory
 Source:		http://ack.netpedia.net/gnp/%{name}-%{version}.tar.gz
