@@ -2,18 +2,18 @@ Summary:	Simple but versatile editor for X11
 Summary(pl):	Prosty ale wszechstronny edytor dla X11
 Name:		gnotepad+
 Version:	1.3.3
-Release:	5
+Release:	6
 License:	GPL
 Group:		Applications/Editors
 Source0:	http://dl.sourceforge.net/gnotepad/%{name}-%{version}.tar.gz
 # Source0-md5:	00f1de16e84cbbe65d85acc542b2791f
-#Patch0:		%{name}-gdk_pixbuf.patch
+Patch0:		%{name}-desktop.patch
 URL:		http://gnotepad.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-#BuildRequires:	gtkhtml-devel
-BuildRequires:	gnome-libs-devel
 BuildRequires:	gettext-devel
+BuildRequires:	gnome-libs-devel
+#BuildRequires:	gtkhtml-devel
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -31,7 +31,7 @@ wspó³czesnych edytorach tekstu z graficznym interfejsem u¿ytkownika.
 
 %prep
 %setup -q
-#%patch0 -p1
+%patch0 -p1
 
 %build
 rm -f missing
