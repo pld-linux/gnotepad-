@@ -9,7 +9,7 @@ Source:		http://ack.netpedia.net/gnp/%{name}-%{version}.tar.gz
 Patch0:		gnotepad+-applnk.patch
 URL:		http://members.xoom.com/ackahn/gnp/
 BuildRequires:	gnome-libs-devel
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix	/usr/X11R6
 %define		_mandir	/usr/X11R6/man
