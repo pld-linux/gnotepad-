@@ -6,6 +6,7 @@ Release:	4
 License:	GPL
 Group:		Applications/Editors
 Source0:	http://dl.sourceforge.net/gnotepad/%{name}-%{version}.tar.gz
+# Source0-md5:	00f1de16e84cbbe65d85acc542b2791f
 #Patch0:		%{name}-gdk_pixbuf.patch
 URL:		http://gnotepad.sourceforge.net/
 BuildRequires:	autoconf
