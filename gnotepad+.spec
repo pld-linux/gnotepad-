@@ -1,8 +1,8 @@
 Summary:	Simple but versatile editor for X11
-Summary(pl):	Prosty ale wszechstronny edytor dlaa X11
+Summary(pl):	Prosty ale wszechstronny edytor dla X11
 Name:		gnotepad+
 Version:	1.3.3
-Release:	4
+Release:	5
 License:	GPL
 Group:		Applications/Editors
 Source0:	http://dl.sourceforge.net/gnotepad/%{name}-%{version}.tar.gz
