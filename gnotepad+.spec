@@ -1,11 +1,12 @@
 Summary:	Simple but versatile editor for X11.
 Name:		gnotepad+
 Version:	1.1.4
-Release:	1
+Release:	3
 Copyright:	Freely distributable
 Group:		Applications/Editors
 Group(pl):	Aplikacje/Edytory
 Source:		http://ack.netpedia.net/gnp/%{name}-%{version}.tar.gz
+Patch0:		gnotepad+-applnk.patch
 URL:		http://members.xoom.com/ackahn/gnp/
 BuildRequires:	gnome-libs-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
@@ -21,8 +22,10 @@ in a modern GUI-based text editor.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
+automake
 LDFLAGS="-s"; export LDFLAGS
 %configure \
 	--enable-gnome
@@ -43,5 +46,5 @@ rm -r $RPM_BUILD_ROOT
 %doc {AUTHORS,NEWS,README,TODO,ChangeLog}.gz
 %attr(755,root,root) %{_bindir}/gnp
 %{_mandir}/man1/*
-%{_datadir}/gnome/apps/Applications/gnotepad+.desktop
+%{_datadir}/applnk/Applications/gnotepad+.desktop
 %{_datadir}/gnotepad+
