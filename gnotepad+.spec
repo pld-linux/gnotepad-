@@ -34,7 +34,7 @@ wspó³czesnych edytorach tekstu z graficznym interfejsem u¿ytkownika.
 
 %build
 %{__libtoolize}
-gettextize --copy --force
+%{__gettextize}
 aclocal
 %{__autoconf}
 rm -f missing
