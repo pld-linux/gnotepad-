@@ -24,7 +24,7 @@ little bloat as possible, while still providing many of the common
 features found in a modern GUI-based text editor.
 
 %description -l pl
-gnotepad+ to prosty w u¿yci, maj±cy ju¿ sporo mo¿liwo¶ci, edytor
+gnotepad+ to prosty w u¿yciu, maj±cy ju¿ sporo mo¿liwo¶ci edytor
 zwyk³ego tekstu dla systemów z X11 i GTK+. Zosta³ tak zaprojektowany,
 by byæ mo¿liwie ma³ym, ale mieæ wiele mo¿liwo¶ci spotykanych we
 wspó³czesnych edytorach tekstu z graficznym interfejsem u¿ytkownika.
