@@ -1,9 +1,10 @@
 Summary:	Simple but versatile editor for X11
 Name:		gnotepad+
 Version:	1.3.1
-Release:	2
+Release:	4
 License:	GPL
 Group:		Applications/Editors
+Group(de):	Applikationen/Editors
 Group(pl):	Aplikacje/Edytory
 Group(pt):	Aplicações/Editores
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/gnotepad/%{name}-%{version}.tar.gz
@@ -26,7 +27,6 @@ features found in a modern GUI-based text editor.
 
 %build
 gettextize --copy --force
-LDFLAGS="-s"; export LDFLAGS
 %configure \
 	--enable-gnome
 %{__make}
@@ -37,8 +37,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	Applicationsdir=%{_applnkdir}/Office/Editors
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	AUTHORS NEWS README TODO ChangeLog
+gzip -9nf AUTHORS NEWS README TODO ChangeLog
 
 %find_lang %{name} --with-gnome
 
