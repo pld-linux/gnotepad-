@@ -1,6 +1,6 @@
 Summary:	Simple but versatile editor for X11.
 Name:		gnotepad+
-Version:	1.1.2
+Version:	1.1.3
 Release:	1
 Group:		Applications/Editors
 Copyright:	Freely distributable
