@@ -33,7 +33,7 @@ wspó³czesnych edytorach tekstu z graficznym interfejsem u¿ytkownika.
 %setup -q
 
 %build
-libtoolize --copy --force
+%{__libtoolize}
 gettextize --copy --force
 aclocal
 %{__autoconf}
