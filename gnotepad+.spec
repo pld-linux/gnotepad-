@@ -1,14 +1,14 @@
 Summary:	Simple but versatile editor for X11.
 Name:		gnotepad+
-Version:	1.1.3
+Version:	1.1.4
 Release:	1
-Group:		Applications/Editors
 Copyright:	Freely distributable
-Url:		http://members.xoom.com/ackahn/gnp
-Source:		%{name}-%{version}.tar.gz
-Source1:	gnotepad+.desktop
+Group:		Applications/Editors
+Group(pl):	Aplikacje/Edytory
+Source:		http://ack.netpedia.net/gnp/%{name}-%{version}.tar.gz
+URL:		http://members.xoom.com/ackahn/gnp/
+BuildRequire:	gnome-libs-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
-Requires:	gtk+ >= 1.1.13 glib >= 1.1.13
 
 %define		_prefix	/usr/X11R6
 %define		_mandir	/usr/X11R6/man
@@ -23,24 +23,17 @@ in a modern GUI-based text editor.
 %setup -q
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" \
-./configure %{_target_platform} \
-	--prefix=%{_prefix} \
-	--disable-gnome
+LDFLAGS="-s"; export LDFLAGS
+%configure \
+	--enable-gnome
 make
 
 %install
 rm -rf $RPM_BUILD_ROOT
+make install DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_prefix}
-make install prefix=$RPM_BUILD_ROOT%{_prefix}
-
-install -d $RPM_BUILD_ROOT%{_datadir}/gnome/apps/Applications
-install -c %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/gnome/apps/Applications
-
-strip $RPM_BUILD_ROOT/%{_bindir}/* || :
-
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* AUTHORS NEWS README TODO ChangeLog
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
+	AUTHORS NEWS README TODO ChangeLog
 
 %clean
 rm -r $RPM_BUILD_ROOT
