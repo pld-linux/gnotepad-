@@ -6,7 +6,7 @@ License:	GPL
 Group:		Applications/Editors
 Group(pt):	X11/Aplicações/Editores
 Group(pl):	Aplikacje/Edytory
-Source0:	http://download.sourceforge.net/gnotepad/%{name}-%{version}.tar.gz
+Source0:	ftp://download.sourceforge.net/pub/sourceforge/gnotepad/%{name}-%{version}.tar.gz
 URL:		http://gnotepad.sourceforge.net/
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gettext-devel
