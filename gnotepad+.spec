@@ -38,7 +38,7 @@ gettextize --copy --force
 aclocal
 autoconf
 rm -f missing
-automake -a -c
+automake -a -c -f
 %configure \
 	--enable-gnome
 %{__make}
