@@ -1,5 +1,5 @@
 Summary:	Simple but versatile editor for X11
-Summary(pl):	Prosty ale wszechstronny edytor dla X11
+Summary(pl.UTF-8):   Prosty ale wszechstronny edytor dla X11
 Name:		gnotepad+
 Version:	1.3.3
 Release:	6
@@ -23,11 +23,11 @@ editor for systems running X11 and using GTK+. It is designed for as
 little bloat as possible, while still providing many of the common
 features found in a modern GUI-based text editor.
 
-%description -l pl
-gnotepad+ to prosty w uøyciu, maj±cy juø sporo moøliwo∂ci edytor
-zwyk≥ego tekstu dla systemÛw z X11 i GTK+. Zosta≥ tak zaprojektowany,
-by byÊ moøliwie ma≥ym, ale mieÊ wiele moøliwo∂ci spotykanych we
-wspÛ≥czesnych edytorach tekstu z graficznym interfejsem uøytkownika.
+%description -l pl.UTF-8
+gnotepad+ to prosty w u≈ºyciu, majƒÖcy ju≈º sporo mo≈ºliwo≈õci edytor
+zwyk≈Çego tekstu dla system√≥w z X11 i GTK+. Zosta≈Ç tak zaprojektowany,
+by byƒá mo≈ºliwie ma≈Çym, ale mieƒá wiele mo≈ºliwo≈õci spotykanych we
+wsp√≥≈Çczesnych edytorach tekstu z graficznym interfejsem u≈ºytkownika.
 
 %prep
 %setup -q
