@@ -1,5 +1,5 @@
 Summary:	Simple but versatile editor for X11
-Summary(pl.UTF-8):   Prosty ale wszechstronny edytor dla X11
+Summary(pl.UTF-8):	Prosty ale wszechstronny edytor dla X11
 Name:		gnotepad+
 Version:	1.3.3
 Release:	6
