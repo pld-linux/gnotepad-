@@ -11,7 +11,7 @@ Patch0:		%{name}-desktop.patch
 URL:		http://gnotepad.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gnome-libs-devel
 #BuildRequires:	gtkhtml-devel
 BuildRequires:	libtool
